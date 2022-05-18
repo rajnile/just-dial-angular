@@ -12,8 +12,9 @@ import { ItemComponent } from './main-container/item/item.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes,RouterLink } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { LearnRxComponent } from './learn-rx/learn-rx.component';
 
 const RoutesConfig: Routes = [
   {
@@ -26,7 +27,11 @@ const RoutesConfig: Routes = [
   },
   {
     path: 'list',
-    component: ListItemComponent
+  component: ItemComponent
+  },
+  {
+    path: 'learnrx',
+    component: LearnRxComponent
   }
 ]
 
@@ -42,7 +47,9 @@ const RoutesConfig: Routes = [
     ItemComponent,
     AboutUsComponent,
     ContactUsComponent,
-    HomeComponent
+    HomeComponent,
+    LearnRxComponent,
+    
   ],
   imports: [
     HttpClientModule,

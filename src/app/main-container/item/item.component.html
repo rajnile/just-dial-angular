@@ -3,4 +3,16 @@
     {{myapi | json}}
 
 </p>
-<app-contact-us></app-contact-us>
+<!-- <app-contact-us></app-contact-us> -->
+<div *ngFor="let myapi of myapi.data">
+    <div class="card" style="width: 18rem;">
+        <img src="{{myapi.avatar}}" class="card-img-top" alt="...">
+        <div class="card-body" >
+            <h5 class="card-title">{{myapi.first_name }} {{myapi.last_name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+            <a href="#" class="btn btn-primary">{{myapi.email}}</a>
+        </div>
+    </div>
+</div>
