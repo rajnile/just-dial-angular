@@ -12,6 +12,24 @@ import { ItemComponent } from './main-container/item/item.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+
+const RoutesConfig: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactUsComponent
+  },
+  {
+    path: 'list',
+    component: ListItemComponent
+  }
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +41,13 @@ import { HttpClientModule } from '@angular/common/http';
     ListItemComponent,
     ItemComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(RoutesConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
