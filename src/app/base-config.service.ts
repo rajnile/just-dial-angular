@@ -6,4 +6,17 @@ import { Injectable } from '@angular/core';
 export class BaseConfigService {
 
   constructor() { }
+  getAddress() {
+
+    let ref = {
+      area: 'BalajiNagar',
+      locality: 'Dhankawadi',
+      city: 'Pune',
+      state: 'Maharashtra'
+    };
+    return ref;
+  }
+  getName() {
+    return 'Nilesh Patil';
+  }
 }

@@ -3,31 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { MenuComponent } from './menu/menu.component';
+import { HeaderMenuComponent } from './header/header-menu/header-menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { FootMenuComponent } from './foot-menu/foot-menu.component';
+import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component';
 import { MainContainerComponent } from './main-container/main-container.component';
-import { ListItemsComponent } from './list-items/list-items.component';
-import { ItemComponent } from './item/item.component';
+import { ListItemComponent } from './main-container/list-item/list-item.component';
+import { ItemComponent } from './main-container/item/item.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { HeaderMenuComponent } from './header-menu/header-menu.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MenuComponent,
+    HeaderMenuComponent,
     FooterComponent,
-    FootMenuComponent,
+    FooterMenuComponent,
     MainContainerComponent,
-    ListItemsComponent,
+    ListItemComponent,
     ItemComponent,
     AboutUsComponent,
-    ContactUsComponent,
-    HeaderMenuComponent
+    ContactUsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule
   ],
   providers: [],
