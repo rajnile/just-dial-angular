@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ElementConfigService } from 'src/app/element-config.service';
 
@@ -8,7 +9,7 @@ import { ElementConfigService } from 'src/app/element-config.service';
 })
 export class ListItemComponent implements OnInit {
 
-  constructor(private user:ElementConfigService) { 
+  constructor(private user:ElementConfigService,private htt:HttpClient) { 
     
   }
 
